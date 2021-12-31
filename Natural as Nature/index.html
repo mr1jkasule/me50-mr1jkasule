@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Natural as Nature Soap</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+            
+            <nav>
+                <div class="logo">
+                    <img src="images/logo.png">
+                
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Our Products</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Cart</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="information">
+                <img src="images/soap.png" class="soap">
+                <div id="circle">
+                    <div class="scent one">
+                        <div>
+                            <h1>Lavender</h1>
+                            <p>delicate, sweet smell, herbal, <br>and evergreen woodsy at the same time.</p>
+                        </div>
+                    </div>
+                    <div class="scent two">
+                        <div>
+                            <h1>Rosemary</h1>
+                            <p>Known for its distinctive fragrance <br>that is characterized by an energizing,<br> evergreen, citrus-like, herbaceous scent</p>
+                        </div>
+                    </div>
+                    <div class="scent three">
+                        <div>
+                            <h1>Sweet Orange</h1>
+                            <p>Said to treat depression, inflammation, <br> digestive aid,and skin issues</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="circle-overlay"></div>
+            </div>
+            
+            <div class="jeremy">
+                <img src="images/arrow.png" id="upBtn">
+                <h3>Different Scents</h3>
+                <img src="images/arrow.png" id="downBtn">
+            </div>
+            
+        </div>
+        
+        <script>
+            var circle = document.getElementById("circle");
+            var upBtn = document.getElementById("upBtn");
+            var downBtn = document.getElementById("downBtn");
+            
+            var rotatevalue = circle.style.transform;
+            var rotateSum;
+            
+            upBtn.onclick = function()
+                                    {
+                                     rotateSum = rotatevalue + "rotate(-90deg)"; 
+                                     circle.style.transform = rotateSum;
+                                     rotatevalue = rotateSum;
+                                    }
+            downBtn.onclick = function()
+                                    {
+                                     rotateSum = rotatevalue + "rotate(90deg)"; 
+                                     circle.style.transform = rotateSum;
+                                     rotatevalue = rotateSum;
+                                    }
+        </script>
+        
+    </body>
+</html>
